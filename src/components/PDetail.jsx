@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import '../assets/styles/pdetails.css'
 import Review from './Review'
 import useFetch from '../utils/useFetch'
-import PDetailsShimmer from './pDetailsShimmer'
+import PDetailsShimmer from './PDetailsShimmer'
 
 export default function PDetail() {
   const {product} = useParams()
