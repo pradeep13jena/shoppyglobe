@@ -1,0 +1,142 @@
+.cartSection{
+  display: flex;
+  max-width: 1200px;
+  margin: 3em 0;
+  margin-inline: auto;
+  gap: 1.5em;
+}
+
+.cart_Name{
+  font-family: "Roboto", serif;
+  font-weight: 600;
+  font-size: 1.4em;
+  color: #878787;
+  padding: 13px 24px;
+  border-bottom: 1px solid #f0f0f0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 0px 0px 0px;  font-family: "Montserrat", serif;
+}
+
+.cartPartDisplaypart2{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart_list{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;  
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .4); 
+}
+
+.cart_priceDisplay{
+  width: 100%;
+  max-height: 290px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .4);
+}
+
+.PDH_first{
+  padding-bottom: .7em;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.Price_details_Header{
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-size: 1.4em;
+  color: #878787;
+  padding: 13px 24px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 1em;
+}
+
+.priceDetailsinBox{
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceDetailsinBox p{
+  font-family: "Roboto", serif;
+  font-size: 1.1em;
+  color: #212121;
+}
+
+.totalAmt{
+  font-family: "Roboto", serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #212121;
+}
+
+.button_DIV_Checkout{
+  margin-top: 1.3em;
+}
+
+.button_DIV_Checkout button{
+  width: 100%;
+  padding: .5em;
+  font-size: 1.2em;
+  font-family: "Roboto", serif;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  font-weight: 500;
+  color: white;
+  background-color: #333;
+  transition: all .1s;
+}
+
+
+.button_DIV_Checkout button:hover{
+  background-color: #878787;
+  cursor: pointer;
+}
+
+@media (max-width: 770px){
+  .cartSection{
+    margin: 3em 0;
+    padding: .7em;
+  }
+
+  .cart_list{
+    gap: .7em;
+  }
+
+  .cart_Name{
+    font-size: 1.2em;
+  }
+  .Price_details_Header{
+    font-size: 1.2em;
+  }
+
+  .priceDetailsinBox {
+    padding: 14px 10px;
+  }
+
+  .pdiMRP, .totalAmt{
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 680px) {
+  .cartSection{
+    flex-direction: column;
+    margin-top: 1em;
+    gap: 3em;
+  }
+  .cart_list{
+    width: 100%;
+  }
+
+  .cart_priceDisplay{
+    width: 100%;
+  }
+
+  .cartPartDisplaypart2{
+    width: 100%;
+  }
+}
+

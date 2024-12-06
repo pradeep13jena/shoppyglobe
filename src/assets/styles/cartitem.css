@@ -1,0 +1,204 @@
+.cart_Item_section{
+  display: flex;
+  gap: 1em;
+  /* border: 1px solid black; */
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;   */
+  padding: .7em;
+  border-radius: 3px;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cart_item_info{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.cart_Item_Image img{
+  width: 120px;
+}
+
+.cart_Item_writtenDetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: .5em 0;
+  gap: 1em;
+}
+
+.cartItem_showPrice{
+  display: flex;
+  align-items: flex-end;
+  gap: .4em;
+}
+
+.cartItem-title, .cartItem-brand{
+  font-family: "Montserrat", serif;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.cartItem-brand{
+  font-size: .8em;
+}
+
+.cartItem_Price{
+  font-size: 1.1em;
+  font-weight: 600;
+  font-family: "Roboto", serif;
+}
+
+.cartItem_OGPrice{
+  font: .5em;
+  color: #555;
+  text-decoration: line-through;
+  font-family: "Roboto", serif;
+
+}
+
+.cartItem_bookDiscount{
+  font-size: .9em;
+  font-weight: 600;
+  color: green;
+  font-family: "Roboto", serif;
+}
+
+.cartItem_buttonSection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: .6em;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .2);
+  border: none;
+}
+
+.cartItem_buttonSection p {
+  padding: .7em 1em;
+  font-family: "Roboto", serif;
+  border-right: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+}
+
+.cartItem_buttonSection p:nth-child(2){
+  box-shadow: 0 0 0 0 transparent;
+  font-size: 1.1em;
+}
+
+.cartItem_buttonSection p:nth-of-type(odd){
+  color: blue;
+  background-color: #fafafa;
+  box-shadow: 0 0 0 0 transparent;
+  border-radius: 2px;
+  font-weight: 500;
+  padding: .7em .7em;
+}
+
+.cartItem_buttonSection p:nth-of-type(odd):hover{
+  cursor: pointer;
+}
+
+.Price_details_Header{
+  font-family: "Roboto", serif;
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+@media (max-width: 770px) {
+  .cart_item_info{
+    gap: .5em;
+  }
+
+  .cart_Item_Image img {
+    width: 90px;
+  }
+
+  .cartItem-title, .cartItem-brand {
+    font-size: .8em;
+  }
+
+  .cartItem-brand{
+    font-size: .7em;
+  }
+
+  .cartItem_Price{
+    font-size: 1em;
+  }
+
+  .cartItem_OGPrice{
+    font-size: .9em;
+  }
+
+  .cartItem_buttonSection p:nth-of-type(odd) {
+    padding: .5em .6em;
+  }
+
+  .cartItem_buttonSection p:nth-child(2) {
+    font-size: 1em;
+  }
+
+  .cartItem_buttonSection p {
+    padding: .5em 1em;
+  }
+}
+@media (max-width: 680px) {
+  .cartSection{
+    flex-direction: column;
+    gap: 3em;
+  }
+
+  .cart_list{
+    width: 100%;
+  }
+
+  .cart_priceDisplay{
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .cart_Item_Image img{
+    width: 80px;
+  }
+
+  .cartItem_buttonSection{
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .cartItem_buttonSection p {
+    padding: .5em .6em;
+  }
+
+  .cartItem_buttonSection p {
+    border: 0px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .cartItem-title, .cartItem-brand {
+    font-size: 0.7em;
+  }
+
+  .cartItem-brand {
+    font-size: .6em;
+  }
+
+  .cartItem_Price {
+    font-size: .9em;
+  }
+
+  .cartItem_OGPrice {
+    font-size: .7em;
+  }
+
+  .cartItem_bookDiscount {
+    font-size: .8em;
+  }
+
+  .cart_list {
+    gap: .9em;
+}
+}

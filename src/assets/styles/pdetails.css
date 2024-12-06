@@ -1,0 +1,266 @@
+.bdetails_section{
+  max-width: 1300px;
+  margin: 2em 0;
+  margin-inline: auto;
+  z-index: 0;
+}
+
+.backButton{
+  padding: .6em 1.3em;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  background: transparent;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  font-size: medium;
+  transition: all .1s;
+  /* margin-bottom: 2em; */
+}
+
+.backButton:hover{
+  cursor: pointer;
+}
+
+/* Book details */
+.bdetails_info{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3em;
+}
+
+.bdetails_img{
+  position: relative;
+}
+
+.bdetails_genre_child{
+  background-color: #BF00FF;
+  color: white;
+  padding: 2px 10px;
+  margin-right: 3px;
+  border-radius: 1000px;
+  text-decoration: none ;
+}
+
+.bdetails_genre_child:hover{
+  background-color: #70008F;
+}
+
+.bdetails_buttons{
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 0 0 0;
+}
+
+.angle-left, .angle-right{
+  position: absolute;
+  top: 50%;
+  font-size: 2.5em;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.angle-left-hidden, .angle-right-hidden{
+  display: none;
+}
+
+.angle-left{
+  left: -10px;
+}
+
+.angle-right{
+  right: -10px;
+}
+
+.angle-left:hover, .angle-right:hover{
+  cursor: pointer;
+}
+
+.heart_bdetails{
+  color: white;
+}
+
+.heart_clicked_bdetails{
+  color: red;
+}
+
+.heart_clicked_bdetails, .heart_bdetails{
+  font-size: 1.5em;
+}
+
+.heart_clicked_bdetails:hover, .heart_bdetails:hover{
+  cursor: pointer;
+}
+
+.bdetails_img img{
+  width: 500px;
+  /* height: 450px; */
+}
+
+.bdetails_written{
+  display: flex;
+  flex-direction: column;
+  gap: .8em;
+}
+
+.bdetails_impo{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: .5em;
+  margin-bottom: 1em;
+}
+
+.bdetails_title{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-bottom: .1em;
+}
+
+.bdetails_author{
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #333;
+}
+
+.bdetails_rating, .bdetails_summary, .bdetails_pages, .bdetails_Language, .bdetails_format, .bdetails_genres{
+  font-family: "Roboto", sans-serif;
+}
+
+.bdetails_rating span{
+  color: green;
+}
+
+.PDetails_ShowPrice{
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: .4em;
+}
+
+.actualPrice{
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  text-decoration: line-through;
+  color: #555;
+  font-weight:300;
+}
+
+.discountPercent{
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: green;
+}
+
+.bdetails_pages{
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.extra_Info{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 7em;
+}
+
+.delivery{
+  margin-bottom: 2em;
+}
+
+.extraInfoTitle{
+  font-size: 1.4em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  margin-bottom: .1em;
+}
+
+.delivery_container{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.review_container{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (max-width: 770px){
+  .bdetails_section{
+    margin: 3em 0;
+    padding: .7em;
+  }
+
+  .bdetails_info{
+    width: 100%;
+  }
+
+  .bdetails_img{
+    width: 40%;
+  }
+
+  .bdetails_img img{
+    width: 350px;
+    height: 468px;
+  }
+  
+}
+
+@media (max-width: 450px) {
+  .bdetails_section{
+    margin: 1em 0;
+    padding: .7em;
+  }
+
+  .bdetails_info{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bdetails_img {
+    width: 100%;
+  }
+
+  .bdetails_img img{
+    width: 100%;
+    height: 468px;
+  }
+  
+  .bdetails_title{
+    font-size: 1.4em;
+  }
+
+  .bdetails_author{
+    font-size: 1.1em;
+  }
+
+  .bdetails_written{
+    align-self: flex-start;
+  }
+
+  .extra_Info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    gap: 3em;
+    margin-top: 3em;
+  }
+}

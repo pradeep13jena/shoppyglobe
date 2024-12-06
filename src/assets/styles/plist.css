@@ -1,0 +1,195 @@
+.browseSection{
+  max-width: 1200px;
+  margin: 3em 0;
+  margin-inline: auto;
+}
+
+.arrow-upwards{
+  position: fixed;
+  bottom: 3.4em;
+  right: 3.4em;
+  padding: 13px 16px;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.arrow-upwards:active{
+  text-decoration: none;
+}
+
+.LotBooks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
+}
+
+/* searchBar */
+.searchBar{
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  width: 100%;
+  margin-top: 3em;
+  position: sticky;
+  top: 0;
+  background-color: white  ;
+  z-index: 2;
+}
+
+.searchBar input{
+  font-family: "Parkinsans", sans-serif;
+  font-size: 1.1em;
+  width: 100%;
+  height: 2.5em;
+  padding: 3px 8px;
+  border: 1px solid #333;
+  outline: none;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.browseBar{
+  position: relative;
+  width: 30%;
+}
+
+.browseClick{
+  font-family: "Parkinsans", sans-serif;
+  font-size: 1.1em;
+  height: 2.5em;
+  padding: 3px 8px;
+  border: 1px solid #333;
+  outline: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+.browseClick:hover{
+  cursor: pointer;
+  color: black;
+}
+
+.genreContainer-close{
+  display: none;
+}
+
+.genreContainer-open{
+  position: absolute;
+  display: flex;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  /* border: 1px solid black; */
+  padding: 15px 10px;
+  border-radius: 5px;
+  row-gap: .7em;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  z-index: 1;
+
+}
+
+.genresubContainer{
+  /* border: 1px solid black; */
+  padding: 4px 5px;
+  width:30%;
+  text-align: center;
+  border-radius: 5px;
+  font-family: "Parkinsans", sans-serif;
+}
+
+.genresubContainer:hover{
+  cursor: pointer;
+}
+
+.genreLink{
+  color: #333;
+  text-decoration: none;
+  transition: all .1s;
+}
+
+.genreLink:hover{
+  color: #FF007F;
+}
+
+
+.LotBooks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+
+@media (max-width: 770px) {
+  .browseSection {
+    margin: 3em 0;
+    padding: .7em;
+  }
+
+  .searchBar input,.browseBar{
+    width: 100%;
+  }
+
+  .genresubContainer{
+    padding: 4px 5px;
+    width:40%;
+  }
+
+  .genreContainer-open{
+    justify-content:space-between;
+  }
+}
+
+@media (max-width: 540px) {
+
+  .arrow-upwards{
+    bottom: .5em;
+    right: .5em;
+  }
+  .browseSection {
+    margin: 1em 0;
+    padding: .7em;
+  }
+
+  .searchBar{
+    margin-top: 1em;
+    padding: 15px;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .searchBar input,.browseBar{
+    width: 100%;
+  }
+
+  .genresubContainer{
+    padding: 4px 5px;
+    width: 30%;
+  }
+
+  .genresubContainer a{
+    font-size: .9em;
+  }
+
+  .browseClick, .searchBar input{
+    font-size: .9em;
+  }
+
+  .LotBooks{
+    justify-content: space-evenly;
+    gap: 1em;
+  }
+}

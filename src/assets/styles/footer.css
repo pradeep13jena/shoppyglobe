@@ -1,0 +1,23 @@
+.footer {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  padding: 1.3em;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.08);
+  font-size: 14px;
+}
+.footer-text {
+  font-size: 1em;
+  color: #555;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+.footer-text a:hover {
+  color: black;
+}
+@media (max-width: 768px) {
+  .footer {
+    display: none;
+  }
+}

@@ -1,0 +1,103 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3em 2.1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+  background-color: white;
+  z-index: 100;
+}
+
+.companName{
+  font-size: 2em;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "Bebas Neue", serif;
+  letter-spacing: .7px;
+  color: #333;
+}
+
+.navLink{
+  display: flex;
+  gap: 1.5em;
+}
+
+.navLink a{
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: #555;
+  font-size: 1.2em;
+}
+
+.navLink a:hover{
+  color: black;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.9em;
+  cursor: pointer;
+  color: #333;
+  background-color: #fff;
+  border: none;
+  outline: none;
+}
+
+.burgerIcon {
+  display: none;
+}
+
+.menu-checkbox{
+  display: none;
+}
+
+@media (max-width: 590px){
+  .navLink {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    width: 170px;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 50;
+  }
+
+  .burgerIcon{
+    display: block;
+  }
+
+  .navLink.open {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 450px) {
+  .header{
+    padding: 1em;
+  }
+  .companName{
+    font-size: 1.6em;
+  }
+
+  .menu-icon{
+    font-size: 1.5em;
+  }
+
+  .navLink a{
+    font-size: .9em;
+  }
+}
