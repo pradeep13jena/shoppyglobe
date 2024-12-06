@@ -4,8 +4,10 @@ import PItem from "./PItem";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import useFetch from "../utils/useFetch";
+import PitemShimmer from "./PitemShimmer";
 
 export default function PList() {
+  const loop = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
   const { category } = useParams();
   const [boxIsOpen, setBoxIsOpen] = useState(false);
   const [valu, setValu] = useState("");
@@ -55,7 +57,10 @@ export default function PList() {
                     rating={product.rating}
                   />
                 ))
-            : "Loading..."}
+            :             <>
+            {loop.map((_, index) => (
+              <PitemShimmer key={index} />
+            ))}</>}
         </div>
       </div>
     </>

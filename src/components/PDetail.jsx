@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import '../assets/styles/pdetails.css'
 import Review from './Review'
 import useFetch from '../utils/useFetch'
+import PDetailsShimmer from './pDetailsShimmer'
 
 export default function PDetail() {
   const {product} = useParams()
@@ -14,7 +15,6 @@ export default function PDetail() {
   useEffect(() => {
     if(data){
       setOBJ(data)
-      console.log(obj)
     }
   }, [data])
 
@@ -72,6 +72,6 @@ export default function PDetail() {
           <h2 className='extraInfoTitle'>Reviews</h2>
           {obj ? (obj.reviews.map((revi, index) => <Review key={index} reviewerName={revi.reviewerName} reviewerEmail={revi.reviewerEmail} comment={revi.comment}/>)) : 'No Reviews...'}
         </div>
-      </div></>) : 'Loading Product Details...'}
+      </div></>): <PDetailsShimmer/>}
     </div>)
 }
