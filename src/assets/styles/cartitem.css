@@ -38,6 +38,8 @@
 .cartItem-title, .cartItem-brand{
   font-family: "Montserrat", serif;
   font-size: 1em;
+  text-decoration: none;
+  color: black;
   font-weight: 500;
 }
 
@@ -88,12 +90,12 @@
 }
 
 .cartItem_buttonSection p:nth-of-type(odd){
-  color: blue;
+  color: #333;
   background-color: #fafafa;
   box-shadow: 0 0 0 0 transparent;
   border-radius: 2px;
   font-weight: 500;
-  padding: .7em .7em;
+  padding: .85em .7em;
 }
 
 .cartItem_buttonSection p:nth-of-type(odd):hover{

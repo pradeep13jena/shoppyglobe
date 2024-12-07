@@ -4,11 +4,15 @@ import '../assets/styles/pdetails.css'
 import Review from './Review'
 import useFetch from '../utils/useFetch'
 import PDetailsShimmer from './PDetailsShimmer'
+import { useDispatch } from 'react-redux'
+import { increment, decrement, addtoCart } from "../utils/feature"
 
 export default function PDetail() {
   const {product} = useParams()
   const [imageIndex, setImage] = useState(0)
   const [obj, setOBJ] = useState(null)
+
+  const dispatch = useDispatch()
 
   const { data, error, loading } = useFetch(`https://dummyjson.com/products/${product}`);
 
@@ -17,6 +21,10 @@ export default function PDetail() {
       setOBJ(data)
     }
   }, [data])
+
+  function handleAddCart(obj){
+    dispatch(addtoCart(obj))
+  }
 
   function prev(){
     imageIndex == 0 ? setImage(2) : setImage(imageIndex-1)
@@ -37,7 +45,7 @@ export default function PDetail() {
         <div className="bdetails_img">
           <img src={obj.images[imageIndex] ? obj.images[imageIndex] : setImage(3)} alt={obj.title + 'images'} />
           <div className="bdetails_buttons">
-            <p className='heart_bdetails'><i className="fa-solid fa-cart-shopping"></i></p>
+            <p onClick={() => handleAddCart(obj)} className='heart_bdetails'><i className="fa-solid fa-cart-shopping"></i></p>
           </div>
             <button onClick={prev} className={obj.images.length <= 1 ? 'angle-left-hidden' : 'angle-left'}><i className="fa-solid fa-angle-left"></i></button>
             <button onClick={next} className={obj.images.length <= 1 ? 'angle-right-hidden' : 'angle-right'}><i className="fa-solid fa-angle-right"></i></button>
@@ -54,7 +62,7 @@ export default function PDetail() {
             </div>
             <p className='bdetails_rating'><b>Rating:&nbsp;&nbsp;&nbsp;</b>{obj.rating} <span><i className="fa-solid fa-star"></i></span></p>
             <p className='bdetails_rating'><b>Category:&nbsp;&nbsp;&nbsp;</b>{obj.category}</p>
-            <p className='bdetails_format'><b>Dimension:&nbsp;&nbsp;&nbsp;</b>{obj.dimensions.depth}m x {obj.dimensions.height}m x {obj.dimensions.width}m</p>
+            <p className='bdetails_format'><b>Dimension:&nbsp;&nbsp;&nbsp;</b>{obj.dimensions.width}m x {obj.dimensions.height}m x {obj.dimensions.depth}m</p>
             <p className='bdetails_summary'><b>Summary:&nbsp;&nbsp;&nbsp;</b>{obj.description} </p>
 
         </div>

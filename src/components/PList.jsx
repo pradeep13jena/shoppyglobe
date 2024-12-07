@@ -46,6 +46,7 @@ export default function PList() {
               <PItem
                 id={product.id}
                 key={product.id}
+                entireArray = {product}
                 discountPercentage={product.discountPercentage}
                 src={product.thumbnail}
                 title={product.title}

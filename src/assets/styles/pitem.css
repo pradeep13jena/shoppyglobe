@@ -120,12 +120,12 @@
 @media (max-width: 760px){
 
   .bcard{
-    width: 180px;
+    width: 160px;
     height: 350px;
   }
   .book_img img{
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
   }
   .book_title, .book_author{
     font-size: .9em;
@@ -162,5 +162,9 @@
     text-decoration: line-through;
     font-family: "Roboto", serif;
     color: #555;
+  }
+
+  .shoePrice{
+    gap: .2em;
   }
 }

@@ -62,8 +62,8 @@
 
 .rotatingText-adjective:nth-of-type(4) {
   animation: rotate-text-up 1.5s 4.5s;
-  color: #FFFFE6;
-  -webkit-text-stroke: 1px #FFFF0A;
+  color: #F5F5F5;
+  -webkit-text-stroke: 1px #7A7A7A;
 
 }
 
@@ -194,7 +194,12 @@
   .homeSection{
     margin: 1em 0;
     padding: .7em;
-    gap: 3em;
+    gap: 4em;
+  }
+
+  .rotatingText-adjective {
+    font-size: 2.7em;
+    margin-top: .7em;
   }
 
   .home_animate{
@@ -207,13 +212,14 @@
   }
 
   .categoryDiv{
-    width: 180px;
+    width: 160px;
     height: 180px;
     border-radius: 5px;
   }
 
   .categoryDiv img{
-    width: 180px;
+    width: 160px;
+    height: 160px;
     border-radius: 5px;
   }
 

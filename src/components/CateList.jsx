@@ -7,7 +7,7 @@ import useFetch from "../utils/useFetch";
 import PitemShimmer from "./PitemShimmer";
 
 export default function PList() {
-  const loop = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+  const loop = [1, 2, 3, 4, 5]
   const { category } = useParams();
   const [boxIsOpen, setBoxIsOpen] = useState(false);
   const [valu, setValu] = useState("");
@@ -49,6 +49,7 @@ export default function PList() {
                   <PItem
                     key={product.id}
                     id={product.id}
+                    entireArray = {product}
                     discountPercentage={product.discountPercentage}
                     src={product.thumbnail}
                     title={product.title}
@@ -57,7 +58,7 @@ export default function PList() {
                     rating={product.rating}
                   />
                 ))
-            :             <>
+            : <>
             {loop.map((_, index) => (
               <PitemShimmer key={index} />
             ))}</>}
