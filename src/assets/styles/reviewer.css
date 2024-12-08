@@ -1,37 +1,36 @@
-.user_logo{
+.user_logo {
   font-size: 2em;
 }
 
-.review_heading{
+.review_heading {
   font-family: "Roboto", sans-serif;
-  font-size: ;
 }
 
-.reviewer_allDetails{
+.reviewer_allDetails {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1em;
-  margin-bottom: .7em;
+  margin-bottom: 0.7em;
 }
 
-.userDetails_section{
+.userDetails_section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: .4em;
+  gap: 0.4em;
 }
 
-.reviewer_name{
+.reviewer_name {
   font-family: "Montserrat", sans-serif;
 }
 
-.reviewer_email{
+.reviewer_email {
   font-family: "Roboto", sans-serif;
 }
 
-.reviewer_comment{
+.reviewer_comment {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   padding-left: 3em;

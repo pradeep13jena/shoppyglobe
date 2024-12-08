@@ -1,4 +1,4 @@
-.cartSection{
+.cartSection {
   display: flex;
   max-width: 1200px;
   margin: 3em 0;
@@ -8,42 +8,43 @@
   align-items: flex-start;
 }
 
-.cart_Name{
+.cart_Name {
   font-family: "Roboto", serif;
   font-weight: 600;
   font-size: 1.4em;
   color: #878787;
   padding: 13px 24px;
   border-bottom: 1px solid #f0f0f0;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 0px 0px 0px;  font-family: "Montserrat", serif;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 0px 0px 0px;
+  font-family: "Montserrat", serif;
 }
 
-.cartPartDisplaypart2{
+.cartPartDisplaypart2 {
   width: 30%;
   display: flex;
   flex-direction: column;
 }
 
-.cart_list{
+.cart_list {
   width: 70%;
   display: flex;
   flex-direction: column;
-  gap: 1em;  
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .4); 
+  gap: 1em;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4);
 }
 
-.cart_priceDisplay{
+.cart_priceDisplay {
   width: 100%;
   max-height: 290px;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .4);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4);
 }
 
-.PDH_first{
-  padding-bottom: .7em;
+.PDH_first {
+  padding-bottom: 0.7em;
   border-bottom: 1px solid #f0f0f0;
 }
 
-.Price_details_Header{
+.Price_details_Header {
   font-family: "Roboto", serif;
   font-weight: 500;
   font-size: 1.4em;
@@ -53,33 +54,33 @@
   margin-bottom: 1em;
 }
 
-.priceDetailsinBox{
+.priceDetailsinBox {
   padding: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.priceDetailsinBox p{
+.priceDetailsinBox p {
   font-family: "Roboto", serif;
   font-size: 1.1em;
   color: #212121;
 }
 
-.totalAmt{
+.totalAmt {
   font-family: "Roboto", serif;
   font-size: 1.2em;
   font-weight: 700;
   color: #212121;
 }
 
-.button_DIV_Checkout{
+.button_DIV_Checkout {
   margin-top: 1.3em;
 }
 
-.button_DIV_Checkout button{
+.button_DIV_Checkout button {
   width: 100%;
-  padding: .5em;
+  padding: 0.5em;
   font-size: 1.2em;
   font-family: "Roboto", serif;
   border: none;
@@ -88,54 +89,73 @@
   font-weight: 500;
   color: white;
   background-color: #333;
-  transition: all .1s;
+  transition: all 0.1s;
 }
 
-
-.button_DIV_Checkout button:hover{
+.button_DIV_Checkout button:hover {
   background-color: #878787;
   cursor: pointer;
 }
 
-.noItem{
+.noItem {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 9em;
 }
 
-.noItem img{
+.noItem img {
   margin-bottom: 30px;
   width: 400px;
 }
 
-.noItem p{
+.noItem p {
   font-family: "Roboto", serif;
   font-size: 1.4em;
   color: #333;
   text-align: center;
 }
 
-.noItem p a{
+.noItem p a {
   color: black;
   text-decoration: none;
   border-bottom: 1px solid #333;
 }
 
-@media (max-width: 770px){
-  .cartSection{
+.checkoutDIV {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin-top: 9em;
+  margin-bottom: 20em;
+}
+
+.checkoutDIV i {
+  font-size: 4em;
+  color: green;
+}
+
+.checkoutDIV p {
+  font-size: 1.4em;
+  font-family: "Roboto", serif;
+}
+
+@media (max-width: 770px) {
+  .cartSection {
     margin: 3em 0;
-    padding: .7em;
+    padding: 0.7em;
   }
 
-  .cart_list{
-    gap: .7em;
+  .cart_list {
+    gap: 0.7em;
   }
 
-  .cart_Name{
+  .cart_Name {
     font-size: 1.2em;
   }
-  .Price_details_Header{
+  .Price_details_Header {
     font-size: 1.2em;
   }
 
@@ -143,37 +163,47 @@
     padding: 14px 10px;
   }
 
-  .pdiMRP, .totalAmt{
+  .pdiMRP,
+  .totalAmt {
     font-size: 1em;
   }
 
-  .noItem img{
+  .noItem img {
     margin-bottom: 30px;
     width: 300px;
   }
 
-  .noItem p{
+  .noItem p {
     font-family: "Roboto", serif;
     font-size: 1.2em;
   }
 }
 
 @media (max-width: 680px) {
-  .cartSection{
+  .cartSection {
     flex-direction: column;
     margin-top: 1em;
     gap: 3em;
   }
-  .cart_list{
+  .cart_list {
     width: 100%;
   }
 
-  .cart_priceDisplay{
+  .cart_priceDisplay {
     width: 100%;
   }
 
-  .cartPartDisplaypart2{
+  .cartPartDisplaypart2 {
     width: 100%;
+  }
+
+  .checkoutDIV i {
+    font-size: 3.6em;
+    color: green;
+  }
+
+  .checkoutDIV p {
+    font-size: 1.2em;
+    font-family: "Roboto", serif;
   }
 }
-

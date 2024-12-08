@@ -7,7 +7,7 @@ import useFetch from "../utils/useFetch";
 import PitemShimmer from "./PitemShimmer";
 
 export default function PList() {
-  const loop = [1, 2, 3, 4, 5]
+  const loop = [1, 2, 3, 4, 5];
   const { category } = useParams();
   const [boxIsOpen, setBoxIsOpen] = useState(false);
   const [valu, setValu] = useState("");
@@ -40,28 +40,31 @@ export default function PList() {
       </div>
       <div className="browseSection">
         <div className="LotBooks">
-          {array && array.products
-            ? array.products
-                .filter((product) =>
-                  product.title.toLowerCase().includes(valu.toLowerCase())
-                )
-                .map((product) => (
-                  <PItem
-                    key={product.id}
-                    id={product.id}
-                    entireArray = {product}
-                    discountPercentage={product.discountPercentage}
-                    src={product.thumbnail}
-                    title={product.title}
-                    brand={product.brand}
-                    price={product.price}
-                    rating={product.rating}
-                  />
-                ))
-            : <>
-            {loop.map((_, index) => (
-              <PitemShimmer key={index} />
-            ))}</>}
+          {array && array.products ? (
+            array.products
+              .filter((product) =>
+                product.title.toLowerCase().includes(valu.toLowerCase())
+              )
+              .map((product) => (
+                <PItem
+                  key={product.id}
+                  id={product.id}
+                  entireArray={product}
+                  discountPercentage={product.discountPercentage}
+                  src={product.thumbnail}
+                  title={product.title}
+                  brand={product.brand}
+                  price={product.price}
+                  rating={product.rating}
+                />
+              ))
+          ) : (
+            <>
+              {loop.map((_, index) => (
+                <PitemShimmer key={index} />
+              ))}
+            </>
+          )}
         </div>
       </div>
     </>

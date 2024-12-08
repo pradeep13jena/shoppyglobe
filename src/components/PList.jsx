@@ -6,10 +6,10 @@ import useFetch from "../utils/useFetch";
 import PitemShimmer from "./PitemShimmer";
 
 export default function PList() {
-  const loop = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+  const loop = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
   const [boxIsOpen, setBoxIsOpen] = useState(false);
   const [valu, setValu] = useState("");
-  const [array, setArray] = useState([])
+  const [array, setArray] = useState([]);
 
   const { data, error, loading } = useFetch("https://dummyjson.com/products");
 
@@ -37,29 +37,31 @@ export default function PList() {
       <div className="browseSection">
         <div className="LotBooks">
           {/* .filter(book => book.title.toLowerCase().includes(valu.toLowerCase()) || book.author.toLowerCase().includes(valu.toLowerCase())) */}
-          {array && array.products ?
+          {array && array.products ? (
             array.products
-            .filter((product) =>
-              product.title.toLowerCase().includes(valu.toLowerCase())
-            )
-            .map((product) => (
-              <PItem
-                id={product.id}
-                key={product.id}
-                entireArray = {product}
-                discountPercentage={product.discountPercentage}
-                src={product.thumbnail}
-                title={product.title}
-                brand={product.brand}
-                price={product.price}
-                rating={product.rating}
-              />
-            )) :
+              .filter((product) =>
+                product.title.toLowerCase().includes(valu.toLowerCase())
+              )
+              .map((product) => (
+                <PItem
+                  id={product.id}
+                  key={product.id}
+                  entireArray={product}
+                  discountPercentage={product.discountPercentage}
+                  src={product.thumbnail}
+                  title={product.title}
+                  brand={product.brand}
+                  price={product.price}
+                  rating={product.rating}
+                />
+              ))
+          ) : (
             <>
-            {loop.map((_, index) => (
-              <PitemShimmer key={index} />
-            ))}</>
-            }
+              {loop.map((_, index) => (
+                <PitemShimmer key={index} />
+              ))}
+            </>
+          )}
         </div>
       </div>
     </>

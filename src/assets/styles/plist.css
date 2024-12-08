@@ -1,10 +1,10 @@
-.browseSection{
+.browseSection {
   max-width: 1200px;
   margin: 3em 0;
   margin-inline: auto;
 }
 
-.arrow-upwards{
+.arrow-upwards {
   position: fixed;
   bottom: 3.4em;
   right: 3.4em;
@@ -16,11 +16,11 @@
   z-index: 1;
 }
 
-.arrow-upwards:active{
+.arrow-upwards:active {
   text-decoration: none;
 }
 
-.LotBooks{
+.LotBooks {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -29,7 +29,7 @@
 }
 
 /* searchBar */
-.searchBar{
+.searchBar {
   max-width: 1200px;
   margin-inline: auto;
   display: flex;
@@ -40,11 +40,11 @@
   margin-top: 3em;
   position: sticky;
   top: 0;
-  background-color: white  ;
+  background-color: white;
   z-index: 2;
 }
 
-.searchBar input{
+.searchBar input {
   font-family: "Parkinsans", sans-serif;
   font-size: 1.1em;
   width: 100%;
@@ -56,12 +56,12 @@
   background-color: #fff;
 }
 
-.browseBar{
+.browseBar {
   position: relative;
   width: 30%;
 }
 
-.browseClick{
+.browseClick {
   font-family: "Parkinsans", sans-serif;
   font-size: 1.1em;
   height: 2.5em;
@@ -75,16 +75,16 @@
   gap: 1em;
 }
 
-.browseClick:hover{
+.browseClick:hover {
   cursor: pointer;
   color: black;
 }
 
-.genreContainer-close{
+.genreContainer-close {
   display: none;
 }
 
-.genreContainer-open{
+.genreContainer-open {
   position: absolute;
   display: flex;
   left: 0;
@@ -95,38 +95,37 @@
   /* border: 1px solid black; */
   padding: 15px 10px;
   border-radius: 5px;
-  row-gap: .7em;
+  row-gap: 0.7em;
   background-color: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   z-index: 1;
-
 }
 
-.genresubContainer{
+.genresubContainer {
   /* border: 1px solid black; */
   padding: 4px 5px;
-  width:30%;
+  width: 30%;
   text-align: center;
   border-radius: 5px;
   font-family: "Parkinsans", sans-serif;
 }
 
-.genresubContainer:hover{
+.genresubContainer:hover {
   cursor: pointer;
 }
 
-.genreLink{
+.genreLink {
   color: #333;
   text-decoration: none;
-  transition: all .1s;
+  transition: all 0.1s;
 }
 
-.genreLink:hover{
-  color: #FF007F;
+.genreLink:hover {
+  color: #ff007f;
 }
 
-
-.LotBooks{
+.LotBooks {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,59 +135,61 @@
 @media (max-width: 770px) {
   .browseSection {
     margin: 3em 0;
-    padding: .7em;
+    padding: 0.7em;
   }
 
-  .searchBar input,.browseBar{
+  .searchBar input,
+  .browseBar {
     width: 100%;
   }
 
-  .genresubContainer{
+  .genresubContainer {
     padding: 4px 5px;
-    width:40%;
+    width: 40%;
   }
 
-  .genreContainer-open{
-    justify-content:space-between;
+  .genreContainer-open {
+    justify-content: space-between;
   }
 }
 
 @media (max-width: 540px) {
-
-  .arrow-upwards{
-    bottom: .5em;
-    right: .5em;
+  .arrow-upwards {
+    bottom: 0.5em;
+    right: 0.5em;
   }
   .browseSection {
     margin: 1em 0;
-    padding: .7em;
+    padding: 0.7em;
   }
 
-  .searchBar{
+  .searchBar {
     margin-top: 1em;
     padding: 15px;
     flex-direction: column;
     gap: 1em;
   }
 
-  .searchBar input,.browseBar{
+  .searchBar input,
+  .browseBar {
     width: 100%;
   }
 
-  .genresubContainer{
+  .genresubContainer {
     padding: 4px 5px;
     width: 30%;
   }
 
-  .genresubContainer a{
-    font-size: .9em;
+  .genresubContainer a {
+    font-size: 0.9em;
   }
 
-  .browseClick, .searchBar input{
-    font-size: .9em;
+  .browseClick,
+  .searchBar input {
+    font-size: 0.9em;
   }
 
-  .LotBooks{
+  .LotBooks {
     justify-content: space-evenly;
     gap: 1em;
   }
