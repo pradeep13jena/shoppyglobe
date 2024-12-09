@@ -1,3 +1,5 @@
+// Shimmer effect for the items getting displayed in the list.
+// In case it takes longer than expected time to display the details.
 import React from "react";
 
 export default function () {

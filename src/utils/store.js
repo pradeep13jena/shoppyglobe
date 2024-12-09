@@ -6,3 +6,6 @@ export const store = configureStore({
     cart: cartReducer,
   },
 });
+
+
+// Store to handle all the reducers and action.

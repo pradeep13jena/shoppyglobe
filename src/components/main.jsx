@@ -1,16 +1,20 @@
+// The main page which controls all the imports and routing of the website.
+
 import App from "./App";
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Home from "./Home";
-import PList from "./PList";
-import PDetail from "./PDetail";
-import CartList from "./CartList";
-import Checkout from "./Checkout";
+// Imported all the components for Lazy display and suspense.
+const PList = lazy(() => import("./PList")); 
+const PDetail = lazy(() => import("./PDetail"));
+const CartList = lazy(() => import("./CartList"));
+const Checkout = lazy(() => import("./Checkout"));
+const CateList = lazy(() => import("./CateList"));
+import LoadingPage from "./LoadingPage";
 import ErrorPage from "./ErrorPage";
 import { store } from "../utils/store";
 import { Provider } from "react-redux";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import CateList from "./CateList";
 
 const router = createBrowserRouter([
   {
@@ -24,23 +28,43 @@ const router = createBrowserRouter([
       },
       {
         path: "/Categories/:category",
-        element: <CateList />,
+        element: (
+          <Suspense fallback={<LoadingPage />}>
+            <CateList />
+          </Suspense>
+        ),
       },
       {
         path: "/Products",
-        element: <PList />,
+        element: (
+          <Suspense fallback={<LoadingPage />}>
+            <PList />
+          </Suspense>
+        ),
       },
       {
         path: "/cart",
-        element: <CartList />,
+        element: (
+          <Suspense fallback={<LoadingPage />}>
+            <CartList />
+          </Suspense>
+        ),
       },
       {
         path: "/item/:product",
-        element: <PDetail />,
+        element: (
+          <Suspense fallback={<LoadingPage />}>
+            <PDetail />
+          </Suspense>
+        ),
       },
       {
         path: "/checkout",
-        element: <Checkout />,
+        element: (
+          <Suspense fallback={<LoadingPage />}>
+            <Checkout />
+          </Suspense>
+        ),
       },
     ],
   },

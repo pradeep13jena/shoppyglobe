@@ -58,6 +58,7 @@ Website is responsive, it can be used on different device with varying width & h
 - **View Product Details**: Get to know all the details before ordering.
 - **Review section**: Read what other people have to say about the product.
 - **Shimmer Effect**: Also added shimmer effects to make good the user Experience.
+- **Multiple images**: You will be able to see multiple images if the data contain multiple images.
 - **User-friendly Interface**: Enjoy a clean and intuitive design that makes browsing and reading easier than ever.
 
 ## Technologies Used
@@ -88,6 +89,6 @@ Website is responsive, it can be used on different device with varying width & h
 
 ## Contact
 
-- [Portfolio Project](https://pradeepjena.netlify.app/)
 - [E-mail](goldrushatjenas@gmail.com)
 - [LinkedIn](https://www.linkedin.com/in/pradeepjena/)
+- [Portfolio Project](https://pradeepjena.netlify.app/)

@@ -1,3 +1,5 @@
+// This home page is what creates the home page together with the app component.
+
 import React from "react";
 import "../assets/styles/home.css";
 import { Link } from "react-router-dom";
@@ -5,6 +7,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="homeSection">
+      {/* Creates a simple animation for the home page */}
       <div className="home_animate">
         <section className="rotatingText">
           <div className="rotatingText-content">
@@ -21,6 +24,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      {/* This part allows user to choose from multiple categories for shopping. */}
       <div className="homeSectionCategories">
         <div className="categoryDiv">
           <Link to={"./categories/mens-shirts"}>

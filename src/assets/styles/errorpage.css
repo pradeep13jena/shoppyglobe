@@ -22,7 +22,40 @@
   color: #ff007f;
 }
 
+.LoaderDIV{
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NoProductsDIV{
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 4.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+}
+
+.NoProductsDIV img{
+  width: 300px;
+}
+
+.NoProductsDIV h1{
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5em;
+}
+
 @media (max-width: 770px) {
+
+  .NoProductsDIV{
+    margin-top: 9em;
+  }
+
   .ErrorSection {
     margin: 3em 0;
     padding: 0.7em;
@@ -51,6 +84,21 @@
 }
 
 @media (max-width: 450px) {
+  .NoProductsDIV{
+    margin: 3em 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+
+  .NoProductsDIV img{
+    width: 200px;
+  }
+
+  .NoProductsDIV h1{
+    font-size: 1.3em;
+  }
+
   .ErrorSection img {
     width: 300px;
     height: 230px;

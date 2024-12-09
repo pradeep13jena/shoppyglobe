@@ -1,3 +1,4 @@
+// Shimmer for the review list in case takes longer to load.
 import React from "react";
 import "../assets/styles/reviewer.css";
 

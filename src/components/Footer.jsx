@@ -1,3 +1,5 @@
+// Footer component displays the copyright claim and my portfolio website.
+// In case someone like the site and has a job to offer ;)
 import React from "react";
 import "../assets/styles/footer.css";
 

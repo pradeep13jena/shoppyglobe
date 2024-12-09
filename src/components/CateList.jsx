@@ -1,3 +1,4 @@
+// Responsible to render all the cart items.
 import React, { useEffect, useState } from "react";
 import "../assets/styles/plist.css";
 import PItem from "./PItem";
@@ -7,16 +8,16 @@ import useFetch from "../utils/useFetch";
 import PitemShimmer from "./PitemShimmer";
 
 export default function PList() {
-  const loop = [1, 2, 3, 4, 5];
+  const loop = [1, 2, 3, 4, 5]; // To create a shimmer effect in case it takes longer than to load.
   const { category } = useParams();
-  const [boxIsOpen, setBoxIsOpen] = useState(false);
   const [valu, setValu] = useState("");
   const [array, setArray] = useState([]);
 
-  const { data, error, loading } = useFetch(
+  const { data, error, loading } = useFetch( // Custom useFetch which return three parameters.
     `https://dummyjson.com/products/category/${category}`
   );
 
+  // To make sure as soon as the items gets updated, store it in state's memory.
   useEffect(() => {
     if (data) {
       setArray(data);
@@ -41,6 +42,7 @@ export default function PList() {
       <div className="browseSection">
         <div className="LotBooks">
           {array && array.products ? (
+            // This code make sure that the search bar filters out the item on basis of the text in the searchbar.
             array.products
               .filter((product) =>
                 product.title.toLowerCase().includes(valu.toLowerCase())
@@ -60,6 +62,7 @@ export default function PList() {
               ))
           ) : (
             <>
+              {/* Helps for the Shimmer effect */}
               {loop.map((_, index) => (
                 <PitemShimmer key={index} />
               ))}

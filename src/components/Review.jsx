@@ -1,3 +1,5 @@
+// Review component to get displayed in the Product details page
+
 import React from "react";
 import "../assets/styles/reviewer.css";
 

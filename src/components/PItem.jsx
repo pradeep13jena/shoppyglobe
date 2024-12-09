@@ -1,3 +1,5 @@
+// This is the actual single item which gets displayed in the form of card.
+
 import React from "react";
 import "../assets/styles/pitem.css";
 import { Link } from "react-router-dom";
@@ -5,11 +7,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, addtoCart } from "../utils/feature";
 
 export default function PItem(Props) {
+  // TO calculate the actual price.
   function calculateOriginalPrice(discountedPrice, discountPercentage) {
     return discountedPrice / (1 - discountPercentage / 100);
   }
-
-  const arrat = useSelector((state) => state.cart.cart);
 
   const dispatch = useDispatch();
 
@@ -23,12 +24,14 @@ export default function PItem(Props) {
       <div className="book_img">
         <img src={Props.src} alt={Props.title + "image"} />
         <div className="books_buttons">
+          {/* View Details link to visit the Product details page */}
           <p className="squareArrow">
             <Link className="squareArr" to={`/item/${Props.id}`}>
               <i className="fa-solid fa-arrow-up-right-from-square"></i>
             </Link>
           </p>
           <p
+            // Function to add item in the cart.
             onClick={() => {
               handleAddCart(Props.id);
             }}

@@ -1,3 +1,4 @@
+// Display the error message in case things go south.
 import React from "react";
 import "../assets/styles/errorpage.css";
 import { Link } from "react-router-dom";
@@ -13,6 +14,7 @@ export default function ErrorPage() {
       <p className="letsget">
         Now, let’s head{" "}
         <span>
+          {/* Links the page to home. */}
           <Link className="animateTheBack" to={"/"}>
             home
           </Link>

@@ -1,3 +1,5 @@
+// Components to show the shimmer effect in case it takes longer to display the data.
+// There's dummy data in there to make it more attractive.
 import React from "react";
 import ReviewShimmer from "./ReviewShimmer";
 

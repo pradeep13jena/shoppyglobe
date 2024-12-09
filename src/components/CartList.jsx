@@ -9,7 +9,6 @@ export default function CartList() {
   const [array, setArray] = useState(null);
   const DeliveryFee = 35;
   const [mrp, setMRP] = useState(0);
-  const [dPrice, SetdPRice] = useState(0);
   const [tPrice, SetTPrice] = useState(0);
   const dispatch = useDispatch();
   const cartArray = useSelector((state) => state.cart);
@@ -17,6 +16,8 @@ export default function CartList() {
   useEffect(() => {
     setArray(cartArray.cart);
 
+    // This function does the job of calculating of total MRP of the items in the cart array.
+    // It is inside of useEFfect to make sure as soon as the cart gets changed. Render the new Price.
     function addMRP(hwhe) {
       return hwhe.reduce((total, item) => {
         return total + (item.quantity * item.price || 0);
@@ -27,12 +28,16 @@ export default function CartList() {
   }, [cartArray]);
 
   useEffect(() => {
+    // This function does the job of calculating of total MRP of the items in the cart array + Delivery fee.
+    // It is inside of useEFfect to make sure as soon as the cart gets changed. Render the new Price.
     SetTPrice(Number(mrp) + DeliveryFee);
   }, [mrp]);
 
   return (
     <div className="cartSection">
-      {array && array.length > 0 ? (
+      {/* This makes sure that only when array has updates then to render the cart item. */}
+      {/* Or else render the "No cart in the item" part. */}
+      {array && array.length > 0 ? ( 
         <>
           <div className="cart_list">
             <h1 className="cart_Name">Cart</h1>

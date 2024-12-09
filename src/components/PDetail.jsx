@@ -1,46 +1,63 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import "../assets/styles/pdetails.css";
+// Responsible to Display more information about a product.
+
 import Review from "./Review";
-import useFetch from "../utils/useFetch";
-import PDetailsShimmer from "./PDetailsShimmer";
-import { useDispatch } from "react-redux";
-import { increment, decrement, addtoCart } from "../utils/feature";
 import ErrorPage from "./ErrorPage";
+import NoProducts from "./NoProducts";
+import "../assets/styles/pdetails.css";
+import useFetch from "../utils/useFetch";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+import PDetailsShimmer from "./PDetailsShimmer";
+import React, { useState, useEffect } from "react";
+import { increment, decrement, addtoCart } from "../utils/feature";
 
 export default function PDetail() {
+  // To pull out the the product detail from the url so that product can be displayed.
   const { product } = useParams();
+
+  // This is for to make sure that the images can be slideshowed. Makes the user see more images of the product.
   const [imageIndex, setImage] = useState(0);
+
+  // To store the details of the specific product in the component's memory.
   const [obj, setOBJ] = useState(null);
 
   const dispatch = useDispatch();
 
+  // Custom hook to pull data from API.
   const { data, error, loading } = useFetch(
     `https://dummyjson.com/products/${product}`
   );
 
+  // As soon as the data has been received, store in the component's memory.
   useEffect(() => {
     if (data) {
       setOBJ(data);
     }
+
   }, [data]);
 
+  // If an error has been received in pulling the details of the specific products, which is not present
+  // This will show the "NOPRODUCT" page.
   if (error) {
-    return <ErrorPage />;
+    return <NoProducts />;
   }
 
+  // Function which is able to add items to the cart.
   function handleAddCart(obj) {
     dispatch(addtoCart(obj));
   }
 
+  // To control the slideshow of the images if clicked left arrow.
   function prev() {
     imageIndex == 0 ? setImage(2) : setImage(imageIndex - 1);
   }
 
+  // To control the slideshow of the images if clicked right arrow.  
   function next() {
     imageIndex == 2 ? setImage(0) : setImage(imageIndex + 1);
   }
 
+  // To calculate the original price of an item as only discountedPrice & discountPercentage has been provided
   function calculateOriginalPrice(discountedPrice, discountPercentage) {
     return discountedPrice / (1 - discountPercentage / 100);
   }
@@ -69,6 +86,7 @@ export default function PDetail() {
                 </p>
               </div>
               <button
+              // To make sure if the image array is empty, then to hide the arrow button to avoid the confusing.
                 onClick={prev}
                 className={
                   obj.images.length <= 1 ? "angle-left-hidden" : "angle-left"
@@ -77,6 +95,7 @@ export default function PDetail() {
                 <i className="fa-solid fa-angle-left"></i>
               </button>
               <button
+                // To make sure if the image array is empty, then to hide the arrow button to avoid the confusing.
                 onClick={next}
                 className={
                   obj.images.length <= 1 ? "angle-right-hidden" : "angle-right"
@@ -149,6 +168,7 @@ export default function PDetail() {
                 {obj.shippingInformation}{" "}
               </p>
             </div>
+            {/* The review container which takes the review components and renders all the review  */}
             <div className="review_container">
               <h2 className="extraInfoTitle">Reviews</h2>
               {obj
@@ -165,6 +185,7 @@ export default function PDetail() {
           </div>
         </>
       ) : (
+        // Until the data get's display show the shimmer effect.
         <PDetailsShimmer />
       )}
     </div>

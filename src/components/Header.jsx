@@ -1,3 +1,4 @@
+// Site's logo and all the navigational link.
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/styles/header.css";
@@ -8,6 +9,7 @@ export default function Header() {
   const [item, setItem] = useState(0);
   const cartArray = useSelector((state) => state.cart.cart);
 
+  // This function calculates the total item in the cart so that you can know directly, How many items are there.
   function countItem(array) {
     return array.reduce((total, current) => {
       return total + (current.quantity || 0);
@@ -35,6 +37,7 @@ export default function Header() {
         <Link to={"/cart"} className="wishlist">
           <span
             className={
+              // To make sure as soon as the numbers of item gets in two digit it display them beautifully!
               item > 9 ? "wishlist_cartItem-double" : "wishlist_cartItem-single"
             }
           >
@@ -44,6 +47,7 @@ export default function Header() {
         </Link>
       </div>
       <div className="burgerIcon">
+        {/* To display the navigation bar in Mobile phone. */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="menu-icon"
