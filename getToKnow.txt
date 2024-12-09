@@ -1,6 +1,2 @@
-Lazy loading
-Comments
-
-
 Github: https://github.com/pradeep13jena/shoppyglobe
 Live website: https://shoppyglobes.vercel.app/
